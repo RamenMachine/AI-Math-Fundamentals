@@ -6,3 +6,11 @@ This repository contains homework assignments and projects exploring mathematica
 
 ### Assignments
 - **HW1** - Gradient Descent: 1D/2D optimization with convergence analysis
+- **HW2** - *[Coming Soon]*
+- **HW3** - *[Coming Soon]*
+- **HW4** - *[Coming Soon]*
+- **HW5** - *[Coming Soon]*
+- **HW6** - *[Coming Soon]*
+- **HW7** - *[Coming Soon]*
+- **HW8** - *[Coming Soon]*
+- **HW9** - *[Coming Soon]*
