@@ -54,14 +54,22 @@ This repository demonstrates advanced mathematical concepts and algorithms funda
 - **Eigenvalue/Eigenvector** computation and applications
 - **Performance benchmarking** against optimized libraries
 
-### 📈 **HW3 - Probability Theory & Bayesian Methods** *(Planned)*
+### � **HW3 - PageRank Algorithm & Graph Analysis**
+**Technologies:** Python, NumPy | **Concepts:** Linear Algebra, Iterative Methods, Graph Theory
+- **Implemented** Google's PageRank algorithm using matrix operations and power iteration
+- **Matrix normalization** to create column-stochastic transition matrices
+- **Iterative convergence** analysis through repeated matrix multiplication
+- **Ranking system** implementation with sorted search results
+- **Key Skills:** Graph algorithms, eigenvector computation, web search fundamentals
+
+### �📈 **HW4 - Probability Theory & Bayesian Methods** *(Planned)*
 **Technologies:** Python, SciPy, Matplotlib | **Concepts:** Statistical Inference, Bayes' Theorem
 - **Bayesian inference** algorithms and posterior distribution analysis
 - **Monte Carlo methods** for numerical integration and sampling
 - **Statistical hypothesis testing** and confidence intervals
 - **Real-world applications** in uncertainty quantification
 
-### 🔄 **HW4 - Advanced Optimization Algorithms** *(Planned)*
+### 🔄 **HW5 - Advanced Optimization Algorithms** *(Planned)*
 **Technologies:** Python, NumPy | **Concepts:** Convex Optimization, Constrained Problems
 - **Newton's Method** and quasi-Newton algorithms (BFGS, L-BFGS)
 - **Constrained optimization** using Lagrange multipliers
