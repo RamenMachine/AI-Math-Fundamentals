@@ -2,6 +2,7 @@
 
 import random
 import math
+import sumpy
 from sympy import *
 
 x = Symbol("x")
