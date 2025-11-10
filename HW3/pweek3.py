@@ -1,18 +1,4 @@
-# Python PageRank Implementation for MENG 404 - Week 3
-# File: pweek3.py
-# CRITICAL: NO print statements in final submission (causes parsing errors)
-
-"""
-Implement PageRank algorithm with three functions using NumPy.
-ONLY import numpy - no other external modules allowed.
-
-STYLE REQUIREMENTS:
-- ALL variables in camelCase (e.g., adjacencyMatrix, columnSum, rankVector)
-- Minimal comments only
-- Make code more verbose/longer in some sections while keeping full functionality
-- Break down operations into multiple steps instead of one-liners
-- Use explicit variable assignments for intermediate calculations
-"""
+#Ameen Rahman
 
 import numpy as np
 
@@ -52,7 +38,7 @@ def PageRank(L, iter=100):
     # start everyone with equal rank
     initialValue = 1.0 / matrixSize
     rankVector = np.full((matrixSize, 1), initialValue, dtype=float)
-    rankVectorList = [rankVector]
+    rankVectorList = []
     
     # keep multiplying to spread the rank around
     iterationCounter = 0
