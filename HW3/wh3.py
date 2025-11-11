@@ -10,37 +10,37 @@ A = np.array([[-2, -4, 2],
               [4, 2, 5]])
 
 print("="*70)
-print("PROBLEM 8: EIGENVALUE AND EIGENVECTOR ANALYSIS")
+print("PROBLEM 8: EIGENVALUE AND EIGENVECTOR STUFF")
 print("="*70)
 
-print("\nGiven Matrix A:")
+print("\nyo heres the matrix A we working with:")
 print(A)
 
 # part a: calculate eigenvalues
 print("\n" + "-"*70)
-print("PART (a): Calculate Eigenvalues using NumPy")
+print("PART (a): finding eigenvalues with numpy")
 print("-"*70)
 
 eigenvalues, eigenvectors = linalg.eig(A)
-print("Eigenvalues:", eigenvalues)
-print("\nAnswer: λ₁ = {:.1f}, λ₂ = {:.1f}, λ₃ = {:.1f}".format(
+print("eigenvalues we got:", eigenvalues)
+print("\nso basically: λ₁ = {:.1f}, λ₂ = {:.1f}, λ₃ = {:.1f}".format(
     eigenvalues[0], eigenvalues[1], eigenvalues[2]))
 
 # part b: calculate eigenvectors
 print("\n" + "-"*70)
-print("PART (b): Calculate Eigenvectors using NumPy")
+print("PART (b): grabbing them eigenvectors")
 print("-"*70)
 
-print("Eigenvectors (each column is an eigenvector):")
+print("eigenvectors (each column is one of em):")
 print(eigenvectors)
 
-print("\nAnswer:")
+print("\naight so:")
 for i in range(3):
-    print(f"For λ = {eigenvalues[i]:.1f}: v ≈ [{eigenvectors[0,i]:.3f}, {eigenvectors[1,i]:.3f}, {eigenvectors[2,i]:.3f}]ᵀ")
+    print(f"when λ = {eigenvalues[i]:.1f}: v is like [{eigenvectors[0,i]:.3f}, {eigenvectors[1,i]:.3f}, {eigenvectors[2,i]:.3f}]ᵀ")
 
 # part c: find integer eigenvector for largest eigenvalue
 print("\n" + "-"*70)
-print("PART (c): Find Integer Eigenvector for Largest Eigenvalue")
+print("PART (c): finding clean integer eigenvector for the biggest eigenvalue")
 print("-"*70)
 
 # find index of largest eigenvalue
@@ -48,60 +48,60 @@ largestIndex = np.argmax(eigenvalues)
 largestEigenvalue = eigenvalues[largestIndex]
 numpyEigenvector = eigenvectors[:, largestIndex]
 
-print(f"Largest eigenvalue: λ = {largestEigenvalue:.1f}")
-print(f"NumPy's normalized eigenvector: {numpyEigenvector}")
+print(f"biggest eigenvalue: λ = {largestEigenvalue:.1f}")
+print(f"numpys normalized version: {numpyEigenvector}")
 
 # manual calculation to find integer eigenvector
 # from the work shown we know v = [1, 6, 16]
 integerEigenvector = np.array([1, 6, 16])
-print(f"\nInteger eigenvector found by hand: v = {integerEigenvector}")
+print(f"\ninteger eigenvector we found by hand: v = {integerEigenvector}")
 
 # verify this is correct by checking Av = λv
 verificationResult = A @ integerEigenvector
 expectedResult = largestEigenvalue * integerEigenvector
 
-print("\nVerification:")
-print(f"A × v = {verificationResult}")
-print(f"λ × v = {expectedResult}")
-print(f"Match: {np.allclose(verificationResult, expectedResult)}")
+print("\nlets check if it actually works:")
+print(f"A times v = {verificationResult}")
+print(f"λ times v = {expectedResult}")
+print(f"they match: {np.allclose(verificationResult, expectedResult)}")
 
 # part d: show how numpy normalized the eigenvector
 print("\n" + "-"*70)
-print("PART (d): Show How NumPy Normalized the Eigenvector")
+print("PART (d): showing how numpy made it all normalized and stuff")
 print("-"*70)
 
-print(f"Our integer eigenvector: v = {integerEigenvector}")
+print(f"our integer eigenvector: v = {integerEigenvector}")
 
 # calculate norm
 vectorNorm = np.linalg.norm(integerEigenvector)
-print(f"\nCalculate norm: ||v|| = √(1² + 6² + 16²) = √{1**2 + 6**2 + 16**2} = {vectorNorm:.3f}")
+print(f"\nfiguring out the norm: ||v|| = √(1² + 6² + 16²) = √{1**2 + 6**2 + 16**2} = {vectorNorm:.3f}")
 
 # normalize
 normalizedVector = integerEigenvector / vectorNorm
-print(f"\nNormalize: v̂ = v/||v|| = {normalizedVector}")
-print(f"NumPy's eigenvector:     {numpyEigenvector}")
+print(f"\nnow we normalize it: v̂ = v/||v|| = {normalizedVector}")
+print(f"numpys eigenvector was:              {numpyEigenvector}")
 
 # check if they match (accounting for possible sign flip)
 matchesExactly = np.allclose(normalizedVector, numpyEigenvector)
 matchesFlipped = np.allclose(normalizedVector, -numpyEigenvector)
 
 if matchesExactly:
-    print("\n✓ Our normalized vector exactly matches NumPy's output!")
+    print("\n✓ yooo our normalized vector is spot on with numpys!")
 elif matchesFlipped:
-    print("\n✓ Our normalized vector matches NumPy's output (with opposite sign)")
-    print("  Note: Both directions represent the same eigenspace")
+    print("\n✓ our normalized vector matches numpys (just flipped sign)")
+    print("  nbd tho both directions work for the eigenspace")
 else:
-    print("\nDifference:", normalizedVector - numpyEigenvector)
+    print("\nuh oh difference:", normalizedVector - numpyEigenvector)
 
 # verify normalized vector has unit length
 normalizedNorm = np.linalg.norm(normalizedVector)
-print(f"\nVerify unit length: ||v̂|| = {normalizedNorm:.10f}")
+print(f"\nchecking unit length: ||v̂|| = {normalizedNorm:.10f}")
 
 print("\n" + "="*70)
-print("CONCLUSION")
+print("TLDR")
 print("="*70)
-print("NumPy normalizes all eigenvectors to have unit length (norm = 1).")
-print("The integer eigenvector [1, 6, 16]ᵀ and NumPy's eigenvector")
-print(f"{numpyEigenvector} point in the same direction,")
-print("but NumPy's version has been scaled to length 1.")
+print("numpy makes all eigenvectors have length 1 (unit norm).")
+print("our integer eigenvector [1, 6, 16]ᵀ and numpys version")
+print(f"{numpyEigenvector} are pointing the same way,")
+print("numpys just scaled it down to length 1 is all.")
 print("="*70)
