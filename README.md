@@ -1,166 +1,76 @@
-# 🧮 AI-Math-Fundamentals
+# Mathematical Foundations for AI/ML
 
-**Advanced Mathematical Foundations for Machine Learning & Artificial Intelligence**
+Python implementations of core mathematical algorithms used in machine learning and optimization.
 
-[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![NumPy](https://img.shields.io/badge/NumPy-Scientific_Computing-orange.svg)](https://numpy.org/)
-[![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-green.svg)](https://matplotlib.org/)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+## What's Here
 
-## 📋 Overview
+This repo contains implementations of fundamental mathematical techniques - gradient descent, matrix operations, optimization methods, and more. Each folder has working code with comments explaining the math behind it.
 
-This repository demonstrates advanced mathematical concepts and algorithms fundamental to modern AI/ML systems. Each project implements core optimization techniques, statistical methods, and numerical algorithms from scratch, showcasing both theoretical understanding and practical programming skills essential for machine learning engineering roles.
+## Projects
 
-**Key Technical Areas:**
-- **Optimization Theory** - Gradient descent, convex optimization, convergence analysis
-- **Linear Algebra** - Matrix operations, eigenvalue decomposition, dimensionality reduction
-- **Probability & Statistics** - Bayesian inference, distribution analysis, statistical modeling
-- **Numerical Methods** - Algorithm implementation, computational efficiency, error analysis
-- **Calculus Applications** - Derivatives, integrals, and their role in ML optimization
+### HW1 - Gradient Descent
+Basic gradient descent implementation with sigmoid activation function. Includes 1D optimization with configurable learning rate and iteration count.
 
-## 🎯 Skills Demonstrated
+**Key files:** `pweek1.py`
 
-### Programming & Software Engineering
-- **Python Development** - Object-oriented design, algorithm implementation
-- **Scientific Computing** - NumPy, SciPy, Matplotlib for numerical analysis
-- **Code Quality** - Clean, documented, and tested implementations
-- **Performance Analysis** - Computational complexity and optimization
+### HW2 - Matrix Operations
+Row operations for Gaussian elimination: swap rows, scale rows, add multiples. Also includes RREF computation and max/average pooling for CNN applications.
 
-### Mathematical Expertise
-- **Algorithm Design** - From mathematical theory to working code
-- **Convergence Analysis** - Understanding when and why algorithms work
-- **Parameter Tuning** - Systematic approach to hyperparameter optimization
-- **Error Analysis** - Numerical stability and precision considerations
+**Key files:** `pweek2.py`
 
-### Machine Learning Foundations
-- **Optimization Algorithms** - Core techniques used in neural network training
-- **Statistical Analysis** - Data-driven insights and model validation
-- **Theoretical Understanding** - Mathematical principles behind ML algorithms
+### HW3 - PageRank Algorithm
+Implementation of Google's PageRank using power iteration on column-stochastic matrices. Includes matrix normalization and result ranking.
 
-## 📚 Project Portfolio
+**Key files:** `pweek3.py`
 
-### 🎯 **HW1 - Advanced Gradient Descent Analysis**
-**Technologies:** Python, NumPy, Matplotlib | **Concepts:** Optimization Theory, Convergence Analysis
-- **Implemented** 1D and 2D gradient descent algorithms from mathematical principles
-- **Analyzed** convergence behavior across different learning rates and starting conditions  
-- **Demonstrated** systematic parameter tuning and numerical stability analysis
-- **Visualized** optimization landscapes and convergence patterns
-- **Key Skills:** Algorithm implementation, numerical optimization, performance analysis
+### HW4 - Least Squares Fitting
+Linear and polynomial regression using NumPy's lstsq. Fits lines and cubic polynomials to data with residual analysis.
 
-### 📊 **HW2 - Linear Algebra & Matrix Decomposition** *(Planned)*
-**Technologies:** Python, NumPy, SciPy | **Concepts:** Eigenvalue Analysis, SVD, PCA
-- **Implementation** of matrix factorization algorithms (SVD, QR, LU decomposition)
-- **Principal Component Analysis** for dimensionality reduction
-- **Eigenvalue/Eigenvector** computation and applications
-- **Performance benchmarking** against optimized libraries
+**Key files:** `wh4.py`
 
-### � **HW3 - PageRank Algorithm & Graph Analysis**
-**Technologies:** Python, NumPy | **Concepts:** Linear Algebra, Iterative Methods, Graph Theory
-- **Implemented** Google's PageRank algorithm using matrix operations and power iteration
-- **Matrix normalization** to create column-stochastic transition matrices
-- **Iterative convergence** analysis through repeated matrix multiplication
-- **Ranking system** implementation with sorted search results
-- **Key Skills:** Graph algorithms, eigenvector computation, web search fundamentals
+### HW5 - Projected Gradient Descent
+Constrained optimization on convex sets (unit ball and square box). Uses SymPy for symbolic differentiation and projects gradient steps back onto feasible regions.
 
-### �📈 **HW4 - Probability Theory & Bayesian Methods** *(Planned)*
-**Technologies:** Python, SciPy, Matplotlib | **Concepts:** Statistical Inference, Bayes' Theorem
-- **Bayesian inference** algorithms and posterior distribution analysis
-- **Monte Carlo methods** for numerical integration and sampling
-- **Statistical hypothesis testing** and confidence intervals
-- **Real-world applications** in uncertainty quantification
+**Key files:** `pweek5.py`
 
-### 🔄 **HW5 - Advanced Optimization Algorithms** *(Planned)*
-**Technologies:** Python, NumPy | **Concepts:** Convex Optimization, Constrained Problems
-- **Newton's Method** and quasi-Newton algorithms (BFGS, L-BFGS)
-- **Constrained optimization** using Lagrange multipliers
-- **Stochastic gradient descent** variants (Adam, RMSprop, AdaGrad)
-- **Convergence rate analysis** and computational complexity
+### HW6 - Probability & Statistics
+Statistical analysis including chi-square testing and distribution fitting.
 
-### 🌐 **HW5 - Neural Network Mathematics** *(Planned)*
-**Technologies:** Python, NumPy | **Concepts:** Backpropagation, Automatic Differentiation
-- **Forward and backward propagation** implementation from scratch
-- **Activation functions** and their derivatives
-- **Loss function optimization** and gradient computation
-- **Weight initialization** strategies and their mathematical basis
+### HW7 - Linear Regression
+Multi-variable regression analysis with golf score prediction dataset.
 
-### 📐 **HW6 - Calculus Applications in ML** *(Planned)*
-**Technologies:** Python, SymPy, NumPy | **Concepts:** Differential Calculus, Chain Rule
-- **Automatic differentiation** engine implementation
-- **Partial derivatives** for multi-variable optimization
-- **Taylor series approximations** for function analysis
-- **Numerical integration** methods (Simpson's rule, Gaussian quadrature)
+### HW8 - Numerical Methods
+Finite differences, interpolation, and numerical stability analysis.
 
-### 🔍 **HW7 - Information Theory & Entropy** *(Planned)*
-**Technologies:** Python, SciPy | **Concepts:** Entropy, Mutual Information, KL Divergence
-- **Entropy calculations** and information-theoretic measures
-- **Mutual information** for feature selection
-- **Cross-entropy loss** derivation and implementation
-- **Data compression** algorithms based on information theory
+### HW9 - Integration
+Numerical integration using Simpson's rule and Gaussian quadrature.
 
-### ⚡ **HW8 - Numerical Methods & Stability** *(Planned)*
-**Technologies:** Python, NumPy | **Concepts:** Numerical Analysis, Error Propagation
-- **Finite difference methods** for derivative approximation
-- **Interpolation algorithms** (spline, polynomial, radial basis functions)
-- **Numerical stability analysis** and condition number computation
-- **Iterative solvers** for large-scale linear systems
+## Setup
 
-### 🎲 **HW9 - Stochastic Processes & Random Methods** *(Planned)*
-**Technologies:** Python, NumPy, Matplotlib | **Concepts:** Markov Chains, Random Walks
-- **Markov Chain Monte Carlo** (MCMC) implementations
-- **Random walk algorithms** and convergence analysis  
-- **Stochastic differential equations** numerical solutions
-- **Bootstrap methods** for statistical estimation
-
-## 🛠️ Technical Implementation
-
-### Development Environment
 ```bash
-# Core dependencies
 pip install numpy scipy matplotlib sympy
-pip install jupyter pandas seaborn plotly
-
-# Development tools
-pip install pytest black flake8 mypy
 ```
 
-### Code Quality Standards
-- **Type Hints** - Full type annotations for better code maintainability
-- **Documentation** - Comprehensive docstrings and inline comments
-- **Testing** - Unit tests for all mathematical implementations
-- **Performance** - Benchmarking and optimization profiling
+## Usage
 
-### Repository Structure
-```
-AI-Math-Fundamentals/
-├── HW1/                    # Gradient Descent Analysis
-│   ├── src/               # Source implementations
-│   ├── tests/             # Unit tests
-│   ├── notebooks/         # Jupyter analysis
-│   └── docs/              # Technical documentation
-├── HW2-HW9/              # Additional projects
-├── utils/                 # Shared mathematical utilities
-└── benchmarks/           # Performance comparisons
+Each homework folder contains standalone Python files. Import and call the functions directly:
+
+```python
+from HW5.pweek5 import PGD, Proj, BoxProj
+import numpy as np
+from sympy import symbols
+
+x, y = symbols('x y')
+result = PGD(x**2 + y**2, np.array([3, 4]), 10, 0.1)
 ```
 
-## 📊 Performance Highlights
+## Interactive Portfolio
 
-- **Algorithm Efficiency** - Optimized implementations achieving O(n²) complexity for matrix operations
-- **Numerical Precision** - Error analysis and stability guarantees for iterative algorithms  
-- **Scalability** - Tested on datasets ranging from small examples to large-scale problems
-- **Code Quality** - 95%+ test coverage with comprehensive documentation
+Open `index.html` in a browser to see an interactive visualization of all the mathematical concepts covered in this project.
 
-## 🎯 Professional Applications
+## Tech Stack
 
-This repository demonstrates skills directly applicable to:
-- **Machine Learning Engineer** roles requiring deep mathematical understanding
-- **Data Scientist** positions involving statistical modeling and optimization
-- **Research & Development** roles in AI/ML algorithm development
-- **Quantitative Analysis** in finance, engineering, and scientific computing
-
-## 🔗 Connect & Collaborate
-
-**Technical Skills Showcased:** Python, NumPy, SciPy, Matplotlib, Algorithm Design, Mathematical Modeling, Statistical Analysis, Optimization Theory, Code Documentation, Performance Analysis
-
----
-
-*This repository represents ongoing coursework in advanced mathematical methods for AI/ML, demonstrating both theoretical understanding and practical implementation skills essential for modern data science and machine learning roles.*
+- Python 3.8+
+- NumPy for numerical computing
+- SymPy for symbolic math
+- Matplotlib for visualization

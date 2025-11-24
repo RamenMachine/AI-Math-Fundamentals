@@ -2,7 +2,7 @@
 
 import random
 import math
-import sumpy
+# sympy already imported below
 from sympy import *
 
 x = Symbol("x")
@@ -24,11 +24,12 @@ def Av(L):
 
 
 def RandAv(n):
+    # generate n random integers between 1 and n
     randomList = []
     for i in range(n):
         randomList.append(random.randint(1, n))
 
-    print(randomList)
+    # return average of the list
     return Av(randomList)
 
 
