@@ -39,8 +39,10 @@ Statistical analysis including chi-square testing and distribution fitting.
 ### HW7 - Linear Regression
 Multi-variable regression analysis with golf score prediction dataset.
 
-### HW8 - Numerical Methods
-Finite differences, interpolation, and numerical stability analysis.
+### HW8 - K-Means Clustering
+Centroid-based clustering algorithm for unsupervised learning. Implements iterative centroid assignment and update steps with projection onto feasible regions.
+
+**Key files:** `pweek8.py`
 
 ### HW9 - Integration
 Numerical integration using Simpson's rule and Gaussian quadrature.

@@ -530,7 +530,7 @@
             <button class="tab-btn orange" onclick="showTab('hw5', 'orange', this)">Projected GD</button>
             <button class="tab-btn red" onclick="showTab('hw6', 'red', this)">Probability</button>
             <button class="tab-btn violet" onclick="showTab('hw7', 'violet', this)">Regression</button>
-            <button class="tab-btn slate" onclick="showTab('hw8', 'slate', this)">Numerical</button>
+            <button class="tab-btn slate" onclick="showTab('hw8', 'slate', this)">K-Means</button>
             <button class="tab-btn teal" onclick="showTab('hw9', 'teal', this)">Integration</button>
         </nav>
     </div>
@@ -1035,65 +1035,85 @@ AddMul(A, [i,j], c)  # Row_j += c * Row_i</div>
             </div>
         </div>
 
-        <!-- HW8: Numerical Methods -->
+        <!-- HW8: K-Means Clustering -->
         <div id="hw8" class="tab-content theme-slate">
             <div class="section-header">
-                <h2>Numerical Methods</h2>
-                <p>Computational techniques for mathematical problems</p>
+                <h2>K-Means Clustering</h2>
+                <p>Unsupervised learning through iterative centroid optimization</p>
             </div>
 
             <div class="metrics-grid">
                 <div class="metric-card">
-                    <h4>Methods</h4>
-                    <div class="value">FDM</div>
-                    <div class="desc">Finite Diff</div>
+                    <h4>Algorithm</h4>
+                    <div class="value">K-Means</div>
+                    <div class="desc">Centroid</div>
                 </div>
                 <div class="metric-card">
-                    <h4>Order</h4>
-                    <div class="value">O(h²)</div>
-                    <div class="desc">Accuracy</div>
+                    <h4>Complexity</h4>
+                    <div class="value">O(nkd)</div>
+                    <div class="desc">Per Iteration</div>
                 </div>
                 <div class="metric-card">
-                    <h4>Stability</h4>
-                    <div class="value">CFL</div>
-                    <div class="desc">Condition</div>
+                    <h4>Distance</h4>
+                    <div class="value">L²</div>
+                    <div class="desc">Euclidean</div>
                 </div>
                 <div class="metric-card">
-                    <h4>Tolerance</h4>
-                    <div class="value">10⁻¹⁰</div>
-                    <div class="desc">Precision</div>
+                    <h4>Convergence</h4>
+                    <div class="value">Local</div>
+                    <div class="desc">Minimum</div>
                 </div>
             </div>
 
             <div class="cards-grid">
                 <div class="neo-card">
-                    <h3>Finite Differences</h3>
+                    <h3>Centroid Calculation</h3>
                     <div class="formula-box">
-                        <div class="label">Central Difference</div>
-                        $$f'(x) \approx \frac{f(x+h) - f(x-h)}{2h}$$
+                        <div class="label">Mean Center</div>
+                        $$\mu_k = \frac{1}{|C_k|} \sum_{x \in C_k} x$$
                     </div>
                     <ul class="feature-list">
-                        <li><strong>Forward:</strong> (f(x+h) - f(x)) / h</li>
-                        <li><strong>Backward:</strong> (f(x) - f(x-h)) / h</li>
-                        <li><strong>Central:</strong> Second-order accurate</li>
+                        <li><strong>Centroid:</strong> Mean of all points in cluster</li>
+                        <li><strong>Update:</strong> Recompute after each assignment</li>
+                        <li><strong>Empty Clusters:</strong> Return NaN when no points assigned</li>
                     </ul>
                 </div>
                 <div class="neo-card">
-                    <h3>Interpolation</h3>
+                    <h3>Assignment Step</h3>
                     <div class="formula-box">
-                        <div class="label">Lagrange Polynomial</div>
-                        $$L(x) = \sum_{i} y_i \prod_{j \neq i} \frac{x - x_j}{x_i - x_j}$$
+                        <div class="label">Distance Metric</div>
+                        $$d(P, C) = (P_x - C_x)^2 + (P_y - C_y)^2$$
                     </div>
                     <ul class="feature-list">
-                        <li><strong>Splines:</strong> Piecewise polynomials</li>
-                        <li><strong>Newton:</strong> Divided differences</li>
-                        <li><strong>Continuity:</strong> Smoothness conditions</li>
+                        <li><strong>Nearest:</strong> Assign to closest centroid</li>
+                        <li><strong>Ties:</strong> Choose earliest centroid</li>
+                        <li><strong>Output:</strong> Array of cluster assignments</li>
                     </ul>
                 </div>
             </div>
 
+            <div class="neo-card">
+                <h3>K-Means Algorithm</h3>
+                <div class="algo-steps">
+                    <span class="algo-step">Initialize K Centroids</span>
+                    <span class="algo-arrow">→</span>
+                    <span class="algo-step">Assign Points</span>
+                    <span class="algo-arrow">→</span>
+                    <span class="algo-step">Update Centroids</span>
+                    <span class="algo-arrow">→</span>
+                    <span class="algo-step">Check Convergence</span>
+                    <span class="algo-arrow">→</span>
+                    <span class="algo-step">Return Clusters</span>
+                </div>
+                <div class="insight-box">
+                    <h4>Optimization Objective</h4>
+                    <p>K-means minimizes the within-cluster sum of squares (WCSS), partitioning data into K distinct clusters. The algorithm alternates between assigning points and updating centroids until convergence to a local optimum.</p>
+                </div>
+            </div>
+
             <div class="btn-group">
-                <a href="HW8/" class="btn btn-primary">View Project</a>
+                <a href="HW8/pweek8.py" class="btn btn-primary">View Source</a>
+                <a href="HW8/" class="btn btn-secondary">Project Folder</a>
             </div>
         </div>
 
